@@ -6,75 +6,113 @@
     </head>
     
     <style>
-        body {
-            background-color:rgb(0, 0, 0);
-            color:white;
-        }
-        h1 {
-            background-color:rgb(105, 0, 105);
-            text-align:center;
-            font-family:cursive;
-            font-size: 3.2em;
-        }
-        h2 {
-            background-color:rgb(163,163,163);
-            color:rgb(105,0,105);
-            text-align:center;
-        }
-        h3 {
-            background-color:rgb(163, 163, 163);
-            color:rgb(105, 0, 105);
-            text-align:center;
-        }
-        h4 {
-            text-align:center;
-        }
-        h6 {
-            color:rgb(217, 185, 217);
-        }
-        #contents-items {
-            color:white;
-            font-family:sans-serif;
-            font-size:0.8em;
-        }
-        em {
-            color:rgb(217,185,217);
-        }
-        strong {
-            color:rgb(217,185,217);
-        }
-
+      body {
+        background-color:rgb(0, 0, 0);
+        color:white;
+        margin-bottom: 20px;
+      }
+      #top {
+        background-color:rgb(105, 0, 105);
+        text-align:center;
+        font-family:cursive;
+        font-size: 3.2em;
+        margin:15px;
+        margin-top: 25px;
+        border: 3px solid white;
+        padding-bottom: 7px;
+      }
+      #top-photo {
+        margin: 10px;
+        border: 7px ridge rgb(155,155,0);
+        position: relative;
+        width: 60%;
+        top: -7px;
+      }
+      h2 {
+        background-color:rgb(163,163,163);
+        color:rgb(105,0,105);
+        text-align:center;
+        border:2px solid grey;
+        margin: 3px;
+      }
+      h3 {
+        background-color:rgb(163, 163, 163);
+        color:rgb(105, 0, 105);
+        text-align:center;
+        margin:3px;
+        border:2px solid grey;
+      }
+      h4 {
+        text-align:center;
+      }
+      h6 {
+        color:rgb(217, 185, 217);
+      }
+      #contents-items {
+        color:white;
+        font-family:sans-serif;
+        font-size:0.8em;
+        margin-left: -15px;
+        margin-right: 5px;
+      }
+      #entries-block {
+        margin: 3px;
+        border: 6px ridge rgb(155,155,0);
+        padding: 0px;
+        position: absolute;
+        right: 20px;
+        
+      }
+      em {
+        color:rgb(217,185,217);
+      }
+      strong {
+        color:rgb(217,185,217);
+      }
+      .entry {
+        border: 5px ridge rgb(155,155,0);
+        padding: 5px;
+      }
+      .entry-text {
+        margin: 7px;
+      }
+      .entry-date {
+        margin: 20px
+      }
     </style>
     
     <body>
         
         <h1 id="top">Fizassist's Blog</h1>
-
+      <div id="entries-block">
         <h3>Entries</h3>
         <ul id="contents-items">
-            <li><a href="#learning-javascript" style="color:rgb(209, 175, 209)">Learning Javascript</a></li>
-            <li><a href="#starting-html-and-css" style="color:rgb(209,175,209)">Starting HTML and CSS</a></li>
+          <li><a href="#learning-javascript" style="color:rgb(209, 175, 209)">Learning Javascript</a></li>
+          <li><a href="#starting-html-and-css" style="color:rgb(209,175,209)">Starting HTML and CSS</a></li>
         </ul>
-        
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/%E0%B2%97%E0%B2%A3%E0%B2%BF%E0%B2%A4%E0%B2%A6_%E0%B2%B8%E0%B2%AE%E0%B3%80%E0%B2%95%E0%B2%B0%E0%B2%A3.jpg" width="539">
-        
+      </div>
+        <img id="top-photo" src="https://upload.wikimedia.org/wikipedia/commons/e/e6/%E0%B2%97%E0%B2%A3%E0%B2%BF%E0%B2%A4%E0%B2%A6_%E0%B2%B8%E0%B2%AE%E0%B3%80%E0%B2%95%E0%B2%B0%E0%B2%A3.jpg" width="539">
+
+      <div id="learning-javascript-block" class="entry">
         <h2 id="learning-javascript">Learning Javascript</h2>
-        <h6>5-23-2019</h6>
+        <h6 class="entry-date">5-23-2019</h6>
         
-        <p>It took me about <em>three weeks</em>, but I have completed a couple Javascript courses on Khan Academy.  At this point, I have no idea how to get my creations from the Khan Academy coding environment out to the web for the world to see.  I decided to learn how to code using HTML and CSS to better understand how to do this.  Below is my first game that I have made, but it only works with a mouse.  </p>
+        <p class="entry-text">It took me about <em>three weeks</em>, but I have completed a couple Javascript courses on Khan Academy.  At this point, I have no idea how to get my creations from the Khan Academy coding environment out to the web for the world to see.  I decided to learn how to code using HTML and CSS to better understand how to do this.  Below is my first game that I have made, but it only works with a mouse.  </p>
         
-        <p align="center"> 
+        <p align="left"> 
         <!--This draws the Canvas on the webpage -->
           <canvas id="mycanvas"></canvas> 
         </p>
+      </div>
       
+      <div id="starting-html-and-css-block" class="entry">  
         <h2 id="starting-html-and-css">Starting HTML and CSS</h2>
-        <h6>5-23-2019</h6>
+        <h6 class="entry-date">5-23-2019</h6>
         
-        <p>At this point, I have put in probably <em>just over 2 hours into learning HTML and CSS</em>.  As of right now, this is not coming as naturally as Javascript did, because there's a <strong>lot</strong> of random tags to remember.  I suppose maybe if I spend more time on the projects, then the practice will help me memorize these tags.</p>
+        <p class="entry-text">At this point, I have put in probably <em>just over 2 hours into learning HTML and CSS</em>.  As of right now, this is not coming as naturally as Javascript did, because there's a <strong>lot</strong> of random tags to remember.  I suppose maybe if I spend more time on the projects, then the practice will help me memorize these tags.</p>
         
-        <h4><a href="#learning-javascript" style="color:rgb(209, 175, 209)">Back to Top</a></h4>
-        
+        <h4><a href="#top" style="color:rgb(209, 175, 209)">Back to Top</a></h4>
+      </div> 
     </body>
   
  <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
@@ -99,7 +137,6 @@ var sunSpin = 0;
 var projectileScoreDed = 0;
 var shotsLeft = 10;
 var mouseIsHeld = false;
-
 //the following sets up the button object type (DO NOT PASTE THIS INTO FINAL)
 var Button = function(config) {
     this.x = config.x || 0;
@@ -111,14 +148,12 @@ var Button = function(config) {
     this.text = config.text || "Click";
     this.onClick = config.onClick || function() {};
 };
-
 Button.prototype.isMouseInside = function() {
     return (mouseX >= this.x &&
             mouseX <= (this.x+this.w) &&
             mouseY >= this.y && 
             mouseY <= (this.y+this.h));
 };
-
 Button.prototype.draw = function() {
     fill(this.color);
     rect(this.x, this.y, this.w, this.h,5);
@@ -127,30 +162,24 @@ Button.prototype.draw = function() {
     textAlign(CENTER,CENTER);
     text(this.text,this.x+this.w/2,this.y+this.h/2);
 };
-
 Button.prototype.handleMouseClick = function() {
     if (this.isMouseInside()) {
         this.onClick();
     }
 };
-
 Button.prototype.handleMouseHold = function() {
     if (this.isMouseInside() && mouseIsHeld) {
         this.onClick();
     }
 };
-
 //the following lines set up the background of the game and create a draw function
 var sunX = 400;
 var sunY = 0;
-
 var clouds = [];
-
 var Cloud = function(x,y) {
     this.x = x;
     this.y = y;
 };
-
 Cloud.prototype.draw = function(x,y) {
     noStroke();
     fill(255, 255, 255);
@@ -165,7 +194,6 @@ Cloud.prototype.draw = function(x,y) {
     ellipse(x+35,y+-41,43,50);
     ellipse(x+1,y+-11,43,72);
 };
-
 var drawClouds = function() {
     var drawCloudOdds = random(0,400);
     if (floor(drawCloudOdds) === 0) {
@@ -183,7 +211,6 @@ var drawClouds = function() {
         popMatrix();
     }
 };
-
 var projectileGameBackground = function() {
     noStroke();
     fill(5, 161, 15);  //grass
@@ -220,12 +247,10 @@ var projectileGameBackground = function() {
         popMatrix();
     }
 };
-
 //the following lines set up the cannon
 var cannonX = 37;
 var cannonY = 368;
 var launchAngle = 45;
-
 var drawCannon = function(x,y,angle) {
     stroke(0, 0, 0);
     strokeWeight(1);
@@ -241,7 +266,6 @@ var drawCannon = function(x,y,angle) {
     line(-25,0,25,0);
     popMatrix();
 };
-
 //these lines are for the projectile behavior/setup
 var Projectile = function(x,y,angle,speed) {
     this.x = x;
@@ -254,13 +278,11 @@ var Projectile = function(x,y,angle,speed) {
     this.time = 0;
     this.color = color(0, 0, 0);
 };
-
 Projectile.prototype.launch = function() {
     this.startTime = millis()/1000;// - this.startTime;
     this.color = color(189, 189, 189);
     shotsLeft -= 1;
 };
-
 Projectile.prototype.detectTarget = function() {
     if (this.y > 0) {
         targetHit = this.x*10 > targets[currentTarget].x - 25 && this.x*10 < targets[currentTarget].x + 25  && this.y < 0.3 && this.y > -0.2;
@@ -278,7 +300,6 @@ Projectile.prototype.detectTarget = function() {
         ballInAir = false;
     }
 };
-
 Projectile.prototype.detectRing = function() {
     ringHit = this.x*10 > rings[currentTarget].x - 3 && this.x*10 < rings[currentTarget].x + 3  && this.y*10 < rings[currentTarget].y + 10 && this.y*10 > rings[currentTarget].y - 10;
     if (ringHit) {
@@ -286,7 +307,6 @@ Projectile.prototype.detectRing = function() {
         ringHit = false;
     }
 };
-
 Projectile.prototype.draw = function() {
     this.speedX = this.speed * cos(launchAngle*3.1416/180);
     this.speedY = this.speed * sin(launchAngle*3.1416/180);
@@ -315,9 +335,7 @@ Projectile.prototype.draw = function() {
     ellipse(this.x,this.y,0.8,0.8);
     popMatrix();
 };
-
 var testProjectile = new Projectile(cannonX,cannonY,launchAngle, 10);
-
 //lines for setting up the targets & rings
 var ProjectileTarget = function(x) {
     this.x = x;
@@ -325,7 +343,6 @@ var ProjectileTarget = function(x) {
     this.hit = false;
     this.bonus = false;
 };
-
 ProjectileTarget.prototype.draw = function() {
     pushMatrix();
     translate(cannonX,cannonY);
@@ -340,13 +357,11 @@ ProjectileTarget.prototype.draw = function() {
     ellipse(this.x,this.y,20,5);
     popMatrix();
 };
-
 var Ring = function(y) {
     this.x = 0;
     this.y = y;
     this.size = 5;
 };  
-
 Ring.prototype.draw = function() {
     pushMatrix();
     translate(cannonX,cannonY);
@@ -360,7 +375,6 @@ Ring.prototype.draw = function() {
     ellipse(this.x,this.y,this.size*1.3,this.size*5);
     popMatrix();
 };
-
 for (var i = 0; i < 10; i++) {
     var randomDistance = random(130,300);
     var randomHeight = random(-40,-200);
@@ -371,7 +385,6 @@ for (var i = 0; i < 10; i++) {
     targets[10] = new ProjectileTarget(400);
     rings[10] = new Ring(200);
 }
-
 //lines to calculate the score
 var calculateScore = function() {
     projectileGameScore = 0;
@@ -386,7 +399,6 @@ var calculateScore = function() {
     }
     projectileGameScore -= projectileScoreDed;
 };
-
 var endGame = function() {
     if (shotsLeft === 0 & ballInAir === false) {
         playing = false;
@@ -400,7 +412,6 @@ var endGame = function() {
         text("Click to Restart", 200,255);
     }
 };
-
 var restartGame = function() {
     if (playing === false) {
         projectileGameScore = 0;
@@ -422,7 +433,6 @@ var restartGame = function() {
         playing = true;
     }
 };
-
 //lines for setting up buttons
 var speedUpButton = new Button({
     text: "Speed Up",
@@ -436,7 +446,6 @@ var speedUpButton = new Button({
         }
     }
 });
-
 var speedDownButton = new Button({
     text: "Speed Down",
     textSize: 12,
@@ -448,7 +457,6 @@ var speedDownButton = new Button({
         }
     }
 });
-
 var angleUpButton = new Button({
     text: "Angle Up",
     textSize: 12,
@@ -460,7 +468,6 @@ var angleUpButton = new Button({
         }
     }
 });
-
 var angleDownButton = new Button({
     text: "Angle Down",
     textSize: 12,
@@ -472,7 +479,6 @@ var angleDownButton = new Button({
         }
     }
 });
-
 var launchButton = new Button({
     color: color(250, 163, 163),
     text: "Launch",
@@ -487,14 +493,12 @@ var launchButton = new Button({
         }
     }    
 });
-
 //below arethe mouseClicked and draw functions for the projectile game
 var game3MouseClicks = function() {
     launchButton.handleMouseClick();
     speedUpButton.handleMouseClick();
     restartGame();
 };
-
 var game3Scene = function() {
     speedUpButton.handleMouseHold();
     speedDownButton.handleMouseHold();
@@ -526,19 +530,16 @@ mouseClicked = function() {
     mouseIsHeld = false;
     game3MouseClicks();
 };
-
 mousePressed = function() {
     mouseIsHeld = true;
 }
       
 testProjectile.startTime = 10000;
-
 draw = function() {
     //println(mouseIsHeld);
     game3Scene();
 };
     }};
-
     // Get the canvas that Processing-js will use
     var canvas = document.getElementById("mycanvas"); 
     // Pass the function sketchProc (defined in myCode.js) to Processing's constructor.
