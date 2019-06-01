@@ -141,17 +141,7 @@
     var contentsItems = document.getElementById("contents-items");
     contentsItems.innerHTML = "";
     for (var i = 0; i < entryNames.length;i++) {
-      contentsItems.innerHTML += "<a>"
-      contentsItems.innerHTML += "<li>" + entryNames[i].innerHTML + "</li>";
-      contentsItems.innerHTML += "</a>"
-      //contentsItems.innerHTML += "<a href=\"#" + entryNames[i].id + "></a>";
-      //contentsItems.innerHTML += "<a href=<li>" + entryNames[i].id + "\" style=\"color:rgb(209,175,209)\">";
-      //contentsItems.innerHTML += "<a href=\"#";
-      //contentsItems.innerHTML += entryNames[i].id;
-      //contentsItems.innerHTML += "\" style=\"color:rgb(209,175,209)\">"
-      //contentsItems.innerHTML += entryNames[i].innerHTML;
-      //contentsItems.innerHTML += "</li>"
-      //contentsItems.innerHTML += "<br>";
+      contentsItems.innerHTML += "<a href=\"#" +entryNames[i].id+ "\"style=\"color:rgb(209, 175, 209)\">" + "<li>" + entryNames[i].innerHTML + "</li>" + "</a>";
     }
     console.log(contentsItems.innerHTML)
     
