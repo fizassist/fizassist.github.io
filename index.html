@@ -25,7 +25,7 @@
         margin: 10px;
         border: 7px ridge rgb(155,155,0);
         position: relative;
-        width: 60%;
+        width: 300px;
         top: -7px;
       }
       h2 {
@@ -55,13 +55,19 @@
         margin-left: -15px;
         margin-right: 5px;
       }
+      a:hover {
+        background-color:rgb(100,100,100);
+      }
       #entries-block {
+        width: 200px;
         margin: 3px;
         border: 6px ridge rgb(155,155,0);
         padding: 0px;
-        position: absolute;
-        right: 20px;
+        float: right;
         
+      }
+      #footer {
+        clear:both;
       }
       em {
         color:rgb(217,185,217);
@@ -87,14 +93,16 @@
       <div id="entries-block">
         <h3>Entries</h3>
         <ul id="contents-items">
+          <!--
           <li><a href="#learning-javascript" style="color:rgb(209, 175, 209)">Learning Javascript</a></li>
           <li><a href="#starting-html-and-css" style="color:rgb(209,175,209)">Starting HTML and CSS</a></li>
+          -->        
         </ul>
       </div>
         <img id="top-photo" src="https://upload.wikimedia.org/wikipedia/commons/e/e6/%E0%B2%97%E0%B2%A3%E0%B2%BF%E0%B2%A4%E0%B2%A6_%E0%B2%B8%E0%B2%AE%E0%B3%80%E0%B2%95%E0%B2%B0%E0%B2%A3.jpg" width="539">
 
       <div id="learning-javascript-block" class="entry">
-        <h2 id="learning-javascript">Learning Javascript</h2>
+        <h2 id="learning-javascript" class="entry-name">Learning Javascript</h2>
         <h6 class="entry-date">5-23-2019</h6>
         
         <p class="entry-text">It took me about <em>three weeks</em>, but I have completed a couple Javascript courses on Khan Academy.  At this point, I have no idea how to get my creations from the Khan Academy coding environment out to the web for the world to see.  I decided to learn how to code using HTML and CSS to better understand how to do this.  Below is my first game that I have made, but it only works with a mouse.  </p>
@@ -106,17 +114,51 @@
       </div>
       
       <div id="starting-html-and-css-block" class="entry">  
-        <h2 id="starting-html-and-css">Starting HTML and CSS</h2>
+        <h2 id="starting-html-and-css" class="entry-name">Starting HTML and CSS</h2>
         <h6 class="entry-date">5-23-2019</h6>
         
         <p class="entry-text">At this point, I have put in probably <em>just over 2 hours into learning HTML and CSS</em>.  As of right now, this is not coming as naturally as Javascript did, because there's a <strong>lot</strong> of random tags to remember.  I suppose maybe if I spend more time on the projects, then the practice will help me memorize these tags.</p>
+      </div>
+      <div id="javascript-within-html-block" class="entry">
+        <h2 id="javascript-within-html" class="entry-name">Javascript Within HTML</h2>
+        <h6 class="entry-date">5-30-19</h6>
         
-        <h4><a href="#top" style="color:rgb(209, 175, 209)">Back to Top</a></h4>
-      </div> 
+        <p class="entry-text">After another <em>6 hours</em> spent learning, I have a basic understanding of HTML and CSS and how they work together.  There's still some things I need to master, but I'm slowly getting the hang of it.  I decided to start learning how to implement the Javascript knowledge I have into my HTML scripts.  It was a lot of JS application without any interactivity, but I am not just starting to learn how I could make it interactive.  I bet I can implement ways to add drop-down menus with my current knowledge.</p>
+      </div>    
+        
+        <h4 id="footer"><a href="#top" style="color:rgb(209, 175, 209)">Back to Top</a></h4>
     </body>
   
  <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
- <script>
+  <script>
+    var topEl = document.getElementById("top");
+    var onTitleClick = function() {
+      topEl.innerHTML = "Clicked!"
+    }
+    topEl.addEventListener("click", onTitleClick);
+    
+    var entryNames = document.getElementsByClassName("entry-name");
+    var contentsItems = document.getElementById("contents-items");
+    contentsItems.innerHTML = "";
+    for (var i = 0; i < entryNames.length;i++) {
+      contentsItems.innerHTML += "<a>"
+      contentsItems.innerHTML += "<li>" + entryNames[i].innerHTML + "</li>";
+      contentsItems.innerHTML += "</a>"
+      //contentsItems.innerHTML += "<a href=\"#" + entryNames[i].id + "></a>";
+      //contentsItems.innerHTML += "<a href=<li>" + entryNames[i].id + "\" style=\"color:rgb(209,175,209)\">";
+      //contentsItems.innerHTML += "<a href=\"#";
+      //contentsItems.innerHTML += entryNames[i].id;
+      //contentsItems.innerHTML += "\" style=\"color:rgb(209,175,209)\">"
+      //contentsItems.innerHTML += entryNames[i].innerHTML;
+      //contentsItems.innerHTML += "</li>"
+      //contentsItems.innerHTML += "<br>";
+    }
+    console.log(contentsItems.innerHTML)
+    
+    //topEl.innerHTML = "Fizassist's Blog";
+    
+  </script>
+  <script>
     var sketchProc = function(processingInstance) {
      with (processingInstance) {
         size(400, 400); 
@@ -137,7 +179,6 @@ var sunSpin = 0;
 var projectileScoreDed = 0;
 var shotsLeft = 10;
 var mouseIsHeld = false;
-//the following sets up the button object type (DO NOT PASTE THIS INTO FINAL)
 var Button = function(config) {
     this.x = config.x || 0;
     this.y = config.y || 0;
